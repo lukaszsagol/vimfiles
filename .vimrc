@@ -3,6 +3,7 @@ set nocompatible
 syntax enable
 set encoding=utf-8
 set showcmd
+set noswapfile
 filetype plugin indent on
 
 "" Whitespace
@@ -20,8 +21,9 @@ set ignorecase
 set smartcase
 
 "" Visual stuff
-set cursorline
 set number
+set cursorline
+hi CursorLine cterm=none ctermbg=none
 
 "" Time out on key codes but not mappings.
 "" Basically this makes terminal Vim work sanely.
@@ -38,3 +40,13 @@ nmap <leader>P PV`]=
 
 "" Let's load some plugins, baby
 execute pathogen#infect()
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_match_window = 'top,order:ttb'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+  \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
+  \ }
+
+let NERDTreeShowHidden=1
+autocmd vimenter * NERDTree
