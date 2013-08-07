@@ -50,3 +50,5 @@ let g:ctrlp_custom_ignore = {
 
 let NERDTreeShowHidden=1
 autocmd vimenter * NERDTree
+
+colorscheme Tomorrow-Night
