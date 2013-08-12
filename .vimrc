@@ -51,4 +51,11 @@ let g:ctrlp_custom_ignore = {
 let NERDTreeShowHidden=1
 autocmd vimenter * NERDTree
 
+"" Tabular.vim
+nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+vmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+nmap <Leader>a: :Tabularize /:\zs<CR>
+vmap <Leader>a: :Tabularize /:\zs<CR>
+
+
 colorscheme Tomorrow-Night
