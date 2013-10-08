@@ -21,9 +21,13 @@ set ignorecase
 set smartcase
 
 "" Visual stuff
-set number
 set cursorline
 hi CursorLine cterm=none ctermbg=none
+
+"" Simple numbers.vim
+set number
+autocmd InsertEnter * set relativenumber
+autocmd InsertLeave * set norelativenumber
 
 "" Time out on key codes but not mappings.
 "" Basically this makes terminal Vim work sanely.
@@ -32,7 +36,7 @@ set ttimeout
 set ttimeoutlen=100
 
 "" The one and only true leader
-let mapleader=","
+let mapleader=" "
 
 "" Paste lines from unnamed register and fix indentation
 nmap <leader>p pV`]=
@@ -49,7 +53,7 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 let NERDTreeShowHidden=1
-autocmd vimenter * NERDTree
+nmap <Leader>d :NERDTreeToggle<CR>
 
 "" Tabular.vim
 nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>

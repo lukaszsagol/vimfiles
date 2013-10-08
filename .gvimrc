@@ -13,3 +13,4 @@ command! Dark :colorscheme Tomorrow-Night
 colorscheme Tomorrow
 
 set gfn=Meslo\ LG\ S\ Regular\ for\ Powerline:h11
+NERDTreeToggle
