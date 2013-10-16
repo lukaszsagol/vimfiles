@@ -7,10 +7,16 @@ if has("gui_macvim")
   imap <D-t> <ESC>:CtrlP<CR>
 endif
 
-command! Light :colorscheme Tomorrow
-command! Dark :colorscheme Tomorrow-Night
+"" Tomorrow Theme Setup
+""command! Light :colorscheme Tomorrow
+""command! Dark :colorscheme Tomorrow-Night
+""colorscheme Tomorrow
 
-colorscheme Tomorrow
+"" Gruvbox Theme Setup
+command! Light :set bg=light
+command! Dark :set bg=dark
+colorscheme gruvbox
 
-set gfn=Meslo\ LG\ S\ Regular\ for\ Powerline:h11
+"" set gfn=Meslo\ LG\ S\ Regular\ for\ Powerline:h11
+set gfn=Anonymous\ Pro:h13
 NERDTreeToggle

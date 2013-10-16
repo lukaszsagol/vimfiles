@@ -6,6 +6,11 @@ set showcmd
 set noswapfile
 filetype plugin indent on
 
+"" Syntax overrides
+au BufRead,BufNewFile *.thor set filetype=ruby
+au BufNewFile,BufRead *.go setlocal noet ts=2 sw=2 sts=2
+
+
 "" Whitespace
 set nowrap
 set tabstop=2 shiftwidth=2
