@@ -67,4 +67,5 @@ nmap <Leader>a: :Tabularize /:\zs<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
 
 
-colorscheme Tomorrow-Night
+set bg=dark
+colorscheme gruvbox
