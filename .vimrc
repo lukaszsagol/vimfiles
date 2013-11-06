@@ -19,6 +19,9 @@ set backspace=indent,eol,start
 set list
 set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
 
+"" Terminal
+set mouse=a
+
 "" Searching
 set hlsearch
 set incsearch
@@ -59,6 +62,8 @@ let g:ctrlp_custom_ignore = {
 
 let NERDTreeShowHidden=1
 nmap <Leader>d :NERDTreeToggle<CR>
+nmap <Leader>t :CtrlP<CR>
+nmap <Leader>h :nohl<CR>
 
 "" Tabular.vim
 nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
