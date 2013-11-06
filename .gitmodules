@@ -22,9 +22,6 @@
 [submodule "bundle/vim-endwise"]
 	path = bundle/vim-endwise
 	url = git://github.com/tpope/vim-endwise.git
-[submodule "bundle/vim-gemfile"]
-	path = bundle/vim-gemfile
-	url = https://github.com/tobiassvn/vim-gemfile
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
