@@ -1,4 +1,5 @@
 "" Basic
+
 set nocompatible
 syntax enable
 set encoding=utf-8
@@ -41,6 +42,7 @@ autocmd InsertLeave * set norelativenumber
 "" Basically this makes terminal Vim work sanely.
 set notimeout
 set ttimeout
+set timeoutlen=1000
 set ttimeoutlen=100
 
 "" The one and only true leader
@@ -62,6 +64,7 @@ let g:ctrlp_custom_ignore = {
 
 let NERDTreeShowHidden=1
 nmap <Leader>d :NERDTreeToggle<CR>
+nmap <Leader>b :Gblame<CR>
 nmap <Leader>t :CtrlP<CR>
 nmap <Leader>h :nohl<CR>
 
@@ -71,6 +74,16 @@ vmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
 nmap <Leader>a: :Tabularize /:\zs<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
 
+"" Events
+au FocusGained * checktime
 
+"" Colors
 set bg=dark
 colorscheme gruvbox
+
+"" Clipboard
+set clipboard=unnamed
+
+if exists("&colorcolumn")
+  set colorcolumn=80
+endif
